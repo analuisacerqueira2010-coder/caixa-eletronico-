@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caixa Eletrônico</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="atm-container">
+
+        <section class="atm-card">
+
+            <!-- Cabeçalho -->
+            <header class="atm-header">
+                <div class="logo">
+                    <span class="logo-icon">▣</span>
+                    <div>
+                        <strong>ATM</strong>
+                        <small>CAIXA ELETRÔNICO</small>
+                    </div>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Sistema online
+                </div>
+            </header>
+
+
+            <!-- Conteúdo principal -->
+            <div class="atm-content">
+
+                <div class="welcome">
+                    <span class="welcome-icon">◉</span>
+
+                    <div>
+                        <p class="eyebrow">AUTOATENDIMENTO</p>
+                        <h1>Quanto você deseja sacar?</h1>
+                        <p class="subtitle">
+                            Informe um valor múltiplo das notas disponíveis.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Saldo -->
+                <div class="balance-card">
+                    <div>
+                        <span>Saldo disponível</span>
+                        <strong id="saldo">R$ 2.500,00</strong>
+                    </div>
+
+                    <div class="balance-icon">
+                        R$
+                    </div>
+                </div>
+
+
+                <!-- Campo de saque -->
+                <form id="saqueForm">
+
+                    <label for="valor">
+                        VALOR DO SAQUE
+                    </label>
+
+                    <div class="input-money">
+                        <span>R$</span>
+
+                        <input
+                            type="number"
+                            id="valor"
+                            placeholder="0,00"
+                            min="1"
+                            step="1"
+                            autocomplete="off"
+                        >
+                    </div>
+
+
+                    <div class="quick-values">
+                        <button type="button" data-value="50">R$ 50</button>
+                        <button type="button" data-value="100">R$ 100</button>
+                        <button type="button" data-value="200">R$ 200</button>
+                        <button type="button" data-value="500">R$ 500</button>
+                    </div>
+
+
+                    <button class="withdraw-button" type="submit">
+                        <span>Confirmar saque</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- Mensagem -->
+                <div id="mensagem" class="message hidden"></div>
+
+
+                <!-- Resultado -->
+                <section id="resultado" class="result hidden">
+
+                    <div class="result-header">
+                        <div>
+                            <span class="eyebrow">SAQUE AUTORIZADO</span>
+                            <h2>Retire suas notas</h2>
+                        </div>
+
+                        <div class="success-icon">
+                            ✓
+                        </div>
+                    </div>
+
+
+                    <div class="withdraw-value">
+                        <span>Valor solicitado</span>
+                        <strong id="valorSacado">R$ 0,00</strong>
+                    </div>
+
+
+                    <div id="notas" class="notes"></div>
+
+
+                    <div class="remaining-balance">
+                        <span>Novo saldo</span>
+                        <strong id="novoSaldo">R$ 0,00</strong>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Rodapé -->
+            <footer class="atm-footer">
+                <span>● Operação segura</span>
+                <span>•</span>
+                <span>Não compartilhe sua senha</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
